@@ -1,7 +1,7 @@
 import Image from "next/image";
+import { InstallButton } from "./components/install-modal";
 
 const GITHUB_URL = "https://github.com/1n4NO/rainmatter-air-extension";
-const CHROME_STORE_URL = "https://chrome.google.com/webstore/detail/rainmatter-air";
 
 const features = [
   {
@@ -96,10 +96,9 @@ export default function Home() {
             </svg>
             GitHub
           </a>
-          <a href={CHROME_STORE_URL} target="_blank" rel="noreferrer"
-             className="px-4 py-2 rounded-full bg-[#6b9eff] text-[#08111e] font-bold hover:opacity-90 transition-opacity">
+          <InstallButton className="px-4 py-2 rounded-full bg-[#6b9eff] text-[#08111e] font-bold hover:opacity-90 transition-opacity">
             Install free
-          </a>
+          </InstallButton>
         </div>
       </nav>
 
@@ -120,10 +119,9 @@ export default function Home() {
           powered by OAQ and OpenAQ, built for Indian cities.
         </p>
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-          <a href={CHROME_STORE_URL} target="_blank" rel="noreferrer"
-             className="flex items-center gap-3 px-6 py-3.5 rounded-full bg-[#6b9eff] text-[#08111e] font-bold text-base hover:opacity-90 active:scale-95 transition-all shadow-[0_0_30px_rgba(107,158,255,0.3)]">
+          <InstallButton className="flex items-center gap-3 px-6 py-3.5 rounded-full bg-[#6b9eff] text-[#08111e] font-bold text-base hover:opacity-90 active:scale-95 transition-all shadow-[0_0_30px_rgba(107,158,255,0.3)]">
             Add to Chrome — it&rsquo;s free
-          </a>
+          </InstallButton>
           <a href={GITHUB_URL} target="_blank" rel="noreferrer"
              className="flex items-center gap-2 px-6 py-3.5 rounded-full border border-[rgba(120,165,255,0.25)] text-[#7b93bc] font-semibold text-base hover:text-[#e6efff] hover:border-[rgba(120,165,255,0.5)] transition-all">
             <svg viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4">
@@ -273,10 +271,9 @@ export default function Home() {
           Free, open source, and takes under two minutes to set up.
         </p>
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 relative">
-          <a href={CHROME_STORE_URL} target="_blank" rel="noreferrer"
-             className="px-8 py-4 rounded-full bg-[#6b9eff] text-[#08111e] font-bold text-base hover:opacity-90 active:scale-95 transition-all shadow-[0_0_40px_rgba(107,158,255,0.3)]">
+          <InstallButton className="px-8 py-4 rounded-full bg-[#6b9eff] text-[#08111e] font-bold text-base hover:opacity-90 active:scale-95 transition-all shadow-[0_0_40px_rgba(107,158,255,0.3)]">
             Add to Chrome — it&rsquo;s free
-          </a>
+          </InstallButton>
           <a href={GITHUB_URL} target="_blank" rel="noreferrer"
              className="px-8 py-4 rounded-full border border-[rgba(120,165,255,0.25)] text-[#7b93bc] font-semibold text-base hover:text-[#e6efff] hover:border-[rgba(120,165,255,0.5)] transition-all">
             Star on GitHub
