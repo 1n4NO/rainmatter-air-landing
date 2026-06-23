@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { InstallButton } from "./components/install-modal";
+import AqiMap from "./components/aqi-map";
 
 const GITHUB_URL = "https://github.com/1n4NO/rainmatter-air-extension";
 
@@ -110,7 +111,7 @@ export default function Home() {
         <p className="text-[#6b9eff] text-xs font-bold tracking-[0.18em] uppercase mb-4">
           Rainmatter Foundation
         </p>
-        <h1 className="text-5xl sm:text-6xl md:text-7xl font-black tracking-tight leading-[1.05] mb-6 max-w-3xl mx-auto">
+        <h1 className="text-4xl sm:text-5xl md:text-7xl font-black tracking-tight leading-[1.05] mb-6 max-w-3xl mx-auto">
           Know the air<br />
           <span className="gradient-text">you&rsquo;re breathing</span>
         </h1>
@@ -138,7 +139,7 @@ export default function Home() {
             alt="Rainmatter Air popup showing AQI gauge and pollutant readings"
             width={682}
             height={1204}
-            className="w-[320px] h-auto rounded-[28px] shadow-[0_30px_80px_rgba(0,0,0,0.6),0_0_50px_rgba(107,158,255,0.12)] border border-[rgba(120,165,255,0.15)]"
+            className="w-full max-w-[320px] h-auto rounded-[28px] shadow-[0_30px_80px_rgba(0,0,0,0.6),0_0_50px_rgba(107,158,255,0.12)] border border-[rgba(120,165,255,0.15)]"
           />
         </div>
       </section>
@@ -176,14 +177,14 @@ export default function Home() {
       <section className="py-28 px-6 max-w-5xl mx-auto">
         <p className="text-center text-[#6b9eff] text-xs font-bold tracking-[0.18em] uppercase mb-3">Screenshots</p>
         <h2 className="text-center text-4xl font-extrabold tracking-tight mb-16">See it in action</h2>
-        <div className="flex flex-col sm:flex-row items-start justify-center gap-10">
+        <div className="flex flex-col sm:flex-row items-center sm:items-start justify-center gap-10">
           <div className="flex flex-col items-center gap-4">
             <Image
               src="/screenshots/popup.png"
               alt="Popup dashboard showing AQI gauge, location, and pollutant breakdown"
               width={682}
               height={1204}
-              className="w-[300px] h-auto rounded-[24px] shadow-[0_20px_60px_rgba(0,0,0,0.5),0_0_30px_rgba(107,158,255,0.1)] border border-[rgba(120,165,255,0.15)]"
+              className="w-full max-w-[280px] h-auto rounded-[24px] shadow-[0_20px_60px_rgba(0,0,0,0.5),0_0_30px_rgba(107,158,255,0.1)] border border-[rgba(120,165,255,0.15)]"
             />
             <p className="text-sm text-[#7b93bc] text-center">Popup dashboard</p>
           </div>
@@ -193,7 +194,7 @@ export default function Home() {
               alt="Settings page for configuring API endpoint, provider, and location"
               width={1062}
               height={1610}
-              className="w-[300px] h-auto rounded-[24px] shadow-[0_20px_60px_rgba(0,0,0,0.5),0_0_30px_rgba(107,158,255,0.1)] border border-[rgba(120,165,255,0.15)]"
+              className="w-full max-w-[280px] h-auto rounded-[24px] shadow-[0_20px_60px_rgba(0,0,0,0.5),0_0_30px_rgba(107,158,255,0.1)] border border-[rgba(120,165,255,0.15)]"
             />
             <p className="text-sm text-[#7b93bc] text-center">Settings page</p>
           </div>
@@ -203,7 +204,7 @@ export default function Home() {
               alt="Compact AQI overlay badge on a webpage"
               width={374}
               height={348}
-              className="w-[180px] h-auto rounded-[20px] shadow-[0_20px_60px_rgba(0,0,0,0.5),0_0_30px_rgba(107,158,255,0.1)] border border-[rgba(120,165,255,0.15)]"
+              className="w-full max-w-[180px] h-auto rounded-[20px] shadow-[0_20px_60px_rgba(0,0,0,0.5),0_0_30px_rgba(107,158,255,0.1)] border border-[rgba(120,165,255,0.15)]"
             />
             <p className="text-sm text-[#7b93bc] text-center">Page overlay</p>
           </div>
@@ -257,6 +258,18 @@ export default function Home() {
                className="text-[#6b9eff] text-sm font-semibold hover:underline">Learn more →</a>
           </div>
         </div>
+      </section>
+
+      {/* ── AQI Map ── */}
+      <section className="py-28 px-4 sm:px-6 max-w-5xl mx-auto">
+        <p className="text-center text-[#6b9eff] text-xs font-bold tracking-[0.18em] uppercase mb-3">Live air quality</p>
+        <h2 className="text-center text-3xl sm:text-4xl font-extrabold tracking-tight mb-3">India AQI map</h2>
+        <p className="text-center text-[#7b93bc] text-sm sm:text-base max-w-lg mx-auto mb-10 leading-relaxed">
+          Showing demo data for major cities. Enter your{" "}
+          <a href="https://oaq.notf.in" target="_blank" rel="noreferrer" className="text-[#6b9eff] hover:underline">OAQ API key</a>
+          {" "}to pull live readings.
+        </p>
+        <AqiMap />
       </section>
 
       {/* ── Final CTA ── */}

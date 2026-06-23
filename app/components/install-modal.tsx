@@ -57,9 +57,10 @@ export function InstallButton({ className, children }: { className: string; chil
 
       {open && (
         <div
-          className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/70 backdrop-blur-sm"
+          className="fixed inset-0 z-[100] overflow-y-auto bg-black/70 backdrop-blur-sm"
           onClick={() => setOpen(false)}
         >
+          <div className="min-h-full flex items-center justify-center p-6 py-10">
           <div
             className="relative w-full max-w-lg bg-[#0b1325] border border-[rgba(120,165,255,0.18)] rounded-3xl p-8 shadow-[0_40px_100px_rgba(0,0,0,0.7)]"
             onClick={(e) => e.stopPropagation()}
@@ -111,6 +112,7 @@ export function InstallButton({ className, children }: { className: string; chil
                 View source on GitHub
               </a>
             </div>
+          </div>
           </div>
         </div>
       )}
