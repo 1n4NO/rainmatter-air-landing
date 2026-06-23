@@ -131,26 +131,14 @@ export default function Home() {
           </a>
         </div>
 
-        {/* Floating mock widget */}
+        {/* Real popup screenshot */}
         <div className="mt-20 flex justify-center animate-float">
-          <div className="w-[200px] bg-[rgba(11,19,37,0.97)] border border-[rgba(120,165,255,0.18)] rounded-[22px] p-5 shadow-[0_30px_80px_rgba(0,0,0,0.5),0_0_40px_rgba(107,158,255,0.1)]">
-            <div className="text-center">
-              <p className="text-[10px] font-semibold tracking-[0.13em] uppercase text-[#7b93bc] mb-1">Current AQI</p>
-              <div className="relative w-[110px] h-[110px] mx-auto mb-1">
-                <svg viewBox="0 0 200 200" className="w-full h-full -rotate-90">
-                  <circle cx="100" cy="100" r="75" fill="none" stroke="rgba(255,255,255,0.07)" strokeWidth="11"/>
-                  <circle cx="100" cy="100" r="75" fill="none" stroke="#eab308" strokeWidth="11"
-                    strokeLinecap="round" strokeDasharray="471.24" strokeDashoffset="282"
-                    style={{filter: "drop-shadow(0 0 10px rgba(234,179,8,0.6))"}}/>
-                </svg>
-                <div className="absolute inset-0 flex flex-col items-center justify-center">
-                  <span className="text-4xl font-black leading-none" style={{color: "#eab308"}}>142</span>
-                  <span className="text-[11px] font-bold mt-0.5" style={{color: "#eab308"}}>Poor</span>
-                </div>
-              </div>
-              <p className="text-[11px] text-[#7b93bc] mt-1">Delhi · 3m ago</p>
-            </div>
-          </div>
+          <img
+            src="/screenshots/popup.png"
+            alt="Rainmatter Air popup showing AQI gauge and pollutant readings"
+            width={320}
+            className="rounded-[28px] shadow-[0_30px_80px_rgba(0,0,0,0.6),0_0_50px_rgba(107,158,255,0.12)] border border-[rgba(120,165,255,0.15)]"
+          />
         </div>
       </section>
 
@@ -180,6 +168,41 @@ export default function Home() {
               <p className="text-sm text-[#7b93bc] leading-relaxed">{f.desc}</p>
             </div>
           ))}
+        </div>
+      </section>
+
+      {/* ── Screenshots ── */}
+      <section className="py-28 px-6 max-w-5xl mx-auto">
+        <p className="text-center text-[#6b9eff] text-xs font-bold tracking-[0.18em] uppercase mb-3">Screenshots</p>
+        <h2 className="text-center text-4xl font-extrabold tracking-tight mb-16">See it in action</h2>
+        <div className="flex flex-col sm:flex-row items-start justify-center gap-10">
+          <div className="flex flex-col items-center gap-4">
+            <img
+              src="/screenshots/popup.png"
+              alt="Popup dashboard showing AQI gauge, location, and pollutant breakdown"
+              width={300}
+              className="rounded-[24px] shadow-[0_20px_60px_rgba(0,0,0,0.5),0_0_30px_rgba(107,158,255,0.1)] border border-[rgba(120,165,255,0.15)]"
+            />
+            <p className="text-sm text-[#7b93bc] text-center">Popup dashboard</p>
+          </div>
+          <div className="flex flex-col items-center gap-4">
+            <img
+              src="/screenshots/settings.png"
+              alt="Settings page for configuring API endpoint, provider, and location"
+              width={300}
+              className="rounded-[24px] shadow-[0_20px_60px_rgba(0,0,0,0.5),0_0_30px_rgba(107,158,255,0.1)] border border-[rgba(120,165,255,0.15)]"
+            />
+            <p className="text-sm text-[#7b93bc] text-center">Settings page</p>
+          </div>
+          <div className="flex flex-col items-center gap-4">
+            <img
+              src="/screenshots/overlay.png"
+              alt="Compact AQI overlay badge on a webpage"
+              width={180}
+              className="rounded-[20px] shadow-[0_20px_60px_rgba(0,0,0,0.5),0_0_30px_rgba(107,158,255,0.1)] border border-[rgba(120,165,255,0.15)]"
+            />
+            <p className="text-sm text-[#7b93bc] text-center">Page overlay</p>
+          </div>
         </div>
       </section>
 
