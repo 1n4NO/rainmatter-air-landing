@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const GITHUB_URL = "https://github.com/rainmatter/rainmatter-air-extension";
 const CHROME_STORE_URL = "https://chrome.google.com/webstore/detail/rainmatter-air";
 
@@ -133,11 +135,12 @@ export default function Home() {
 
         {/* Real popup screenshot */}
         <div className="mt-20 flex justify-center animate-float">
-          <img
+          <Image
             src="/screenshots/popup.png"
             alt="Rainmatter Air popup showing AQI gauge and pollutant readings"
-            width={320}
-            className="rounded-[28px] shadow-[0_30px_80px_rgba(0,0,0,0.6),0_0_50px_rgba(107,158,255,0.12)] border border-[rgba(120,165,255,0.15)]"
+            width={682}
+            height={1204}
+            className="w-[320px] h-auto rounded-[28px] shadow-[0_30px_80px_rgba(0,0,0,0.6),0_0_50px_rgba(107,158,255,0.12)] border border-[rgba(120,165,255,0.15)]"
           />
         </div>
       </section>
@@ -177,29 +180,32 @@ export default function Home() {
         <h2 className="text-center text-4xl font-extrabold tracking-tight mb-16">See it in action</h2>
         <div className="flex flex-col sm:flex-row items-start justify-center gap-10">
           <div className="flex flex-col items-center gap-4">
-            <img
+            <Image
               src="/screenshots/popup.png"
               alt="Popup dashboard showing AQI gauge, location, and pollutant breakdown"
-              width={300}
-              className="rounded-[24px] shadow-[0_20px_60px_rgba(0,0,0,0.5),0_0_30px_rgba(107,158,255,0.1)] border border-[rgba(120,165,255,0.15)]"
+              width={682}
+              height={1204}
+              className="w-[300px] h-auto rounded-[24px] shadow-[0_20px_60px_rgba(0,0,0,0.5),0_0_30px_rgba(107,158,255,0.1)] border border-[rgba(120,165,255,0.15)]"
             />
             <p className="text-sm text-[#7b93bc] text-center">Popup dashboard</p>
           </div>
           <div className="flex flex-col items-center gap-4">
-            <img
+            <Image
               src="/screenshots/settings.png"
               alt="Settings page for configuring API endpoint, provider, and location"
-              width={300}
-              className="rounded-[24px] shadow-[0_20px_60px_rgba(0,0,0,0.5),0_0_30px_rgba(107,158,255,0.1)] border border-[rgba(120,165,255,0.15)]"
+              width={1062}
+              height={1610}
+              className="w-[300px] h-auto rounded-[24px] shadow-[0_20px_60px_rgba(0,0,0,0.5),0_0_30px_rgba(107,158,255,0.1)] border border-[rgba(120,165,255,0.15)]"
             />
             <p className="text-sm text-[#7b93bc] text-center">Settings page</p>
           </div>
           <div className="flex flex-col items-center gap-4">
-            <img
+            <Image
               src="/screenshots/overlay.png"
               alt="Compact AQI overlay badge on a webpage"
-              width={180}
-              className="rounded-[20px] shadow-[0_20px_60px_rgba(0,0,0,0.5),0_0_30px_rgba(107,158,255,0.1)] border border-[rgba(120,165,255,0.15)]"
+              width={374}
+              height={348}
+              className="w-[180px] h-auto rounded-[20px] shadow-[0_20px_60px_rgba(0,0,0,0.5),0_0_30px_rgba(107,158,255,0.1)] border border-[rgba(120,165,255,0.15)]"
             />
             <p className="text-sm text-[#7b93bc] text-center">Page overlay</p>
           </div>
