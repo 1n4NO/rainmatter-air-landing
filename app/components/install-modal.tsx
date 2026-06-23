@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { createPortal } from "react-dom";
 
 const GITHUB_URL = "https://github.com/1n4NO/rainmatter-air-extension";
 
@@ -55,9 +56,9 @@ export function InstallButton({ className, children }: { className: string; chil
         {children}
       </button>
 
-      {open && (
+      {open && createPortal(
         <div
-          className="fixed inset-0 z-[100] overflow-y-auto bg-black/70 backdrop-blur-sm"
+          className="fixed inset-0 z-[9999] overflow-y-auto bg-black/70 backdrop-blur-sm"
           onClick={() => setOpen(false)}
         >
           <div className="min-h-full flex items-center justify-center p-6 py-10">
@@ -114,7 +115,8 @@ export function InstallButton({ className, children }: { className: string; chil
             </div>
           </div>
           </div>
-        </div>
+        </div>,
+        document.body
       )}
     </>
   );
