@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-const GITHUB_URL = "https://github.com/rainmatter/rainmatter-air-extension";
+const GITHUB_URL = "https://github.com/1n4NO/rainmatter-air-extension";
 const CHROME_STORE_URL = "https://chrome.google.com/webstore/detail/rainmatter-air";
 
 const features = [
